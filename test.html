@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+.container {
+    
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-card {
+
+    min-height: 280px;
+    width: 60%;
+    background-color: gainsboro;
+   display: grid;
+   grid-template-columns: repeat(5,1fr);
+   grid-template-rows: repeat(5,1fr);
+   grid-column-gap: 1;
+   grid-row-gap: 3;
+}
+
+
+
+.card{
+
+    width: 50px;
+    height: 30px;
+    background-color: blueviolet;
+    
+   
+
+}
+
+.cd-1 {
+
+    height: 100px;
+    width: 90px;
+    grid-area: 1/1/2/2;
+}
+
+.cd-2 {
+
+height: 50px;
+width: 80px;
+grid-area: 1/2/2/3;
+}
+
+.cd-3 {
+
+height: 50px;
+width: 80px;
+grid-area: 1/3/2/4;
+}
+
+.cd-4 {
+
+height: 50px;
+width: 80px;
+grid-area: 2/2/3/3;
+}
+
+.carousel-container {
+    height: 330px;
+    width: 100%;
+    padding: 10px;
+    
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: no-repeat center center / cover url(./images/hf.jpeg);
+    background-size: 472px;
+    background-position: 52px;
+
+}
+
+.carousel {
+
+    display: flex;
+    transition: transform 0.5s ease;
+    
+    
+   
+   
+}
+
+.carousel-slide{
+    min-width: 100%; /* Largeur minimale pour chaque diapositive */
+  position: relative;
+  left: 15%;
+  filter: contrast(1.6);
+}
+
+.carousel-slide img {
+    max-width: 100%; /* Pour que les images ne débordent pas */
+    height: 334px;
+}
+.carousel-container button {
+
+    position: absolute;
+    top: 150px;
+    padding: 10px;
+    cursor: pointer;
+    background: rgba(172, 170, 170, 0.425);
+    border: none;
+    z-index: 2;
+  transform: translateY(-50%);
+
+
+
+
+}
+
+button .bi-chevron-left,.bi-chevron-right {
+
+    height: 70px;
+    width: 70px;
+    color: white;
+    
+}
+
+
+.carousel-container .carousel-next {
+
+
+right: 10px;
+
+}
+
+
+.hero-conten {
+
+    color: black;
+}
+
+
+</style>
+
+<body>
+    <div class="carousel-container"> 
+
+        <div class="carousel">
+            
+           
+            <div class="carousel-slide">
+              <img class="imgslide" src="./images/3.png" alt="Image 1">
+            </div>
+            <div class="carousel-slide">
+              <img class="imgslide" src="./images/4.png" alt="Image 1">
+            </div>
+            <div class="carousel-slide">
+              <img class="imgslide" src="./images/5.png" alt="Image 1">
+            </div>
+            <div class="carousel-slide">
+              <img class="imgslide" src="./images/6.png" alt="Image 1">
+              <div class="hero-content">
+                <small class="stm">Découvrez</small>
+                <h2>les secrets <br />de la <small>Beauté</small></h2>
+                <p>
+                  Obtenez des cheveux impeccable avec notre dernière gamme de <br />
+                  cosmétiques d'apparence naturelle pour tous les types de cheveux.
+                </p>
+                <button>Shop Now</button>
+              </div>
+            </div>
+           
+            <div class="carousel-slide">
+              <img class="imgslide" src="./images/8.png" style="position: relative; top: -12px; left: -14px;" alt="Image 1">
+            </div>
+
+        </div>
+        <button class="carousel-prev" onclick="plusDives(-1)" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg></button>
+
+
+          <button class="carousel-next" onclick="plusDives(+1)" >
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+      </svg></button>
+    </div>
+
+
+    <section class="container">
+    
+        <div class="cont-card">
+            <div class="card cd-1"></div>
+            <div class="card cd-2"></div>
+            <div class="card cd-3"></div>
+            <div class="card cd-4"></div>
+           </div>
+   
+    </section>
+
+    <script src="./asset/js/main.js"></script>
+</body>
+</html>
